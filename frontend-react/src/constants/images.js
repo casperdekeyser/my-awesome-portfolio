@@ -36,6 +36,7 @@ import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
 import cover from '../assets/cover.png';
+import casper from '../assets/casper.png';
 
 export default {
   email,
@@ -72,4 +73,5 @@ export default {
   skype,
   spotify,
   cover,
+  casper,
 };
