@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { AiFillEye } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
+
 
 import "./Work.scss";
 
@@ -76,40 +77,29 @@ const Work = () => {
 								}}
 								className="app__work-hover app__flex"
 							>
-								<a href={work.projectLink} target="blank" rel="noreffer">
+								<a href={`/item/${work._id}`} target="_self" rel="noreffer">
 									<motion.div
 										whileInView={{ scale: [0, 1] }}
 										whileHover={{ opacity: [1, 0.9] }}
 										transition={{ duration: 0.25 }}
 										className="app__flex"
 									>
-                    <AiFillEye />
-
-                  </motion.div>
-								</a>
-                
-                <a href={work.codeLink} target="blank" rel="noreffer">
-									<motion.div
-										whileInView={{ scale: [0, 1] }}
-										whileHover={{ opacity: [1, 0.9] }}
-										transition={{ duration: 0.25 }}
-										className="app__flex"
-									>
-                    <AiFillGithub />
-
-                  </motion.div>
+										<AiFillEye />
+									</motion.div>
 								</a>
 							</motion.div>
 						</div>
 
-            <div className="app__work-content app__flex">
-                <h4 className="bold-text">{work.title}</h4>
-                <p className="p-text" style={{marginTop: 10 }}>{work.description}</p>
+						<div className="app__work-content app__flex">
+							<h4 className="bold-text">{work.title}</h4>
+							<p className="p-text" style={{ marginTop: 10 }}>
+								{work.shortDescription}
+							</p>
 
-                <div className="app__work-tag app__flex">
-                  <p className="p-text">{work.tags[0]}</p>
-                </div>
-            </div>
+							<div className="app__work-tag app__flex">
+								<p className="p-text">{work.tags[0]}</p>
+							</div>
+						</div>
 					</div>
 				))}
 			</motion.div>

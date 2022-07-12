@@ -8,21 +8,15 @@ export default {
         title: 'Title',
         type: 'string',
       },
-    
       {
-        name: 'description',
-        title: 'Description',
+        name: 'shortDescription',
+        title: 'Short Description',
         type: 'string',
       },
       {
-        name: 'projectLink',
-        title: 'Project Link',
-        type: 'string',
-      },
-      {
-        name: 'codeLink',
-        title: 'Code Link',
-        type: 'string',
+        name: 'longDescription',
+        title: 'Long Description',
+        type: 'text',
       },
       {
         name: 'imgUrl',
@@ -45,6 +39,5 @@ export default {
          }
        ]
       },
-     
     ],
   };
