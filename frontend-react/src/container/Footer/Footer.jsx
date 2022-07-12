@@ -1,11 +1,39 @@
-import React from 'react'
+import React from "react";
 
-import './Footer.scss';
+import { images } from "../../constants";
+import { AppWrap, MotionWrap } from "../../wrapper";
+import "./Footer.scss";
 
-export const Footer = () => {
-  return (
-    <div>Footer</div>
-  );
-}
+const Footer = () => {
+	return (
+		<>
+			<h2 className="head-text">Get in touch with me</h2>
 
-export default Footer;
+			<div className="app__footer-cards">
+				<div className="app__footer-card ">
+					<img src={images.email} alt="email" />
+					<a href="mailto:hello@micael.com" className="p-text">
+						casper.dekeyser@gmail.com
+					</a>
+				</div>
+			</div>
+			<div className="app__footer-cards">
+				<div className="app__footer-card ">
+					<img src={images.linkedin} alt="linkedin" />
+					<a
+						href="https://www.linkedin.com/in/casperdekeyser/"
+						className="p-text"
+					>
+						www.linkedin.com/in/casperdekeyser/
+					</a>
+				</div>
+			</div>
+		</>
+	);
+};
+
+export default AppWrap(
+	MotionWrap(Footer, "app__footer"),
+	"contact",
+	"app__whitebg"
+);

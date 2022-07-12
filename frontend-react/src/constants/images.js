@@ -37,7 +37,9 @@ import spotify from '../assets/spotify.png';
 
 import cover from '../assets/cover.png';
 import casper from '../assets/casper.png';
+import linkedin from '../assets/linkedin-logo.png';
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   email,
   mobile,
@@ -74,4 +76,5 @@ export default {
   spotify,
   cover,
   casper,
+  linkedin,
 };

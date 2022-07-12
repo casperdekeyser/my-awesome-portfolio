@@ -1,15 +1,20 @@
 import React from 'react';
-import { BsLinkedin} from 'react-icons/bs'
+import {  BsLinkedin } from 'react-icons/bs';
+import {  FiMail } from 'react-icons/fi';
 
 const SocialMedia = () => {
   return (
 		<div className="app__social">
-			<div>
-				<a href="https://www.linkedin.com/in/casperdekeyser/">
-					{" "}
+			<a href="https://www.linkedin.com/in/casperdekeyser/">
+				<div>
 					<BsLinkedin />
-				</a>
-			</div>
+				</div>
+			</a>
+			<a href="mailto:casper.dekeyser@gmail.com">
+				<div>
+					<FiMail />
+				</div>
+			</a>
 		</div>
 	);
 }
