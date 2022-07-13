@@ -5,11 +5,12 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
+import Swal from "sweetalert2";
 
 import "./Work.scss";
 
 const Work = () => {
-	const [activeFilter, setActiveFilter] = useState("All");
+	const [activeFilter, setActiveFilter] = useState("Top");
 	const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 	const [works, setWorks] = useState([]);
 	const [filterWork, setFilterWork] = useState([]);
@@ -24,18 +25,26 @@ const Work = () => {
 	}, []);
 
 	const handleWorkFilter = (item) => {
-    setActiveFilter(item);
-    setAnimateCard([{y:100, opacity: 0}])
-    setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
+		setActiveFilter(item);
+		setAnimateCard([{ y: 100, opacity: 0 }]);
+		setTimeout(() => {
+			setAnimateCard([{ y: 0, opacity: 1 }]);
 
-      if (item === 'All') {
-        setFilterWork(works);
-      } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
-      }
-    }, 500);
-  };
+			if (item === "All") {
+				setFilterWork(works);
+			} else {
+				setFilterWork(works.filter((work) => work.tags.includes(item)));
+			}
+		}, 500);
+	};
+
+	const showAlert = () => {
+		Swal.fire(
+			"Work In Progress",
+			"I am currenlty working on this feature right now.\nCome back later to see it in action!",
+			"info"
+		);
+	};
 
 	return (
 		<>
@@ -43,7 +52,7 @@ const Work = () => {
 				My Creative <span>Portfolio</span> Section
 			</h2>
 			<div className="app__work-filter">
-				{["UI/UX", "Web App", "Mobile App", "React JS", "All"].map(
+				{["Top", "Web", "Mobile", "Game","VR", "Research", "Other", "International", "All"].map(
 					(item, index) => (
 						<div
 							key={index}
@@ -77,7 +86,13 @@ const Work = () => {
 								}}
 								className="app__work-hover app__flex"
 							>
-								<a href={`/item/${work._id}`} target="_self" rel="noreffer">
+								{/* <a href={`/item/${work._id}`} target="_self" rel="noreffer"> */}
+								<a
+									href="/#work"
+									onClick={showAlert}
+									target="_self"
+									rel="noreffer"
+								>
 									<motion.div
 										whileInView={{ scale: [0, 1] }}
 										whileHover={{ opacity: [1, 0.9] }}

@@ -28,6 +28,11 @@ const Footer = () => {
 					</a>
 				</div>
 			</div>
+
+			<div className="app__footer copyright">
+				<p className="p-text">©2022 CASPER DE KEYSER</p>
+				<p className="p-text">All rights reserved</p>
+			</div>
 		</>
 	);
 };
@@ -35,5 +40,5 @@ const Footer = () => {
 export default AppWrap(
 	MotionWrap(Footer, "app__footer"),
 	"contact",
-	"app__whitebg"
+	"app__primagebg"
 );
