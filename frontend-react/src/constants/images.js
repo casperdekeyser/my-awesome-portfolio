@@ -40,6 +40,7 @@ import casper from '../assets/casper.png';
 import casper2 from '../assets/casper2.png';
 import linkedin from '../assets/linkedin-logo.png';
 import belgium from '../assets/belgium.png'
+import logo2 from '../assets/logo2.png'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -81,4 +82,5 @@ export default {
   casper2,
   linkedin,
   belgium,
+  logo2,
 };
