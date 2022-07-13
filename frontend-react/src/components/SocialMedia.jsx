@@ -1,9 +1,9 @@
-import React from 'react';
-import {  BsLinkedin } from 'react-icons/bs';
-import {  FiMail } from 'react-icons/fi';
+import React from "react";
+import { BsLinkedin } from "react-icons/bs";
+import { FiMail } from "react-icons/fi";
 
 const SocialMedia = () => {
-  return (
+	return (
 		<div className="app__social">
 			<a href="https://www.linkedin.com/in/casperdekeyser/">
 				<div>
@@ -17,6 +17,6 @@ const SocialMedia = () => {
 			</a>
 		</div>
 	);
-}
+};
 
-export default SocialMedia
+export default SocialMedia;

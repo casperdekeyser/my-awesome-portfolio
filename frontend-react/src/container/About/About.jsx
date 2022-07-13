@@ -6,13 +6,6 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 import { urlFor, client } from "../../client";
 
-// const abouts = [
-//   { title: 'Web Development', description: 'I am a good web developer.', imgUrl: images.about01},
-//   { title: 'Web Design', description: 'I am a good web developer.', imgUrl: images.about02},
-//   { title: 'Web Development', description: 'I am a good web developer.', imgUrl: images.about03},
-//   { title: 'UX/UI', description: 'I am a good web developer.', imgUrl: images.about04},
-// ];
-
 const About = () => {
 	const [abouts, setAbouts] = useState([]);
 
@@ -27,8 +20,8 @@ const About = () => {
 	return (
 		<>
 			<h2 className="head-text">
-				I Know That <span>Good Design</span>
-				<br /> means <span>Good Business</span>
+				I Am A <span>Motivated</span>
+				<br /> And <span>Driven</span> Tech Student
 			</h2>
 			<div className="app__profiles">
 				{abouts.map((about, index) => (
