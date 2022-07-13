@@ -37,9 +37,9 @@ import spotify from '../assets/spotify.png';
 
 import cover from '../assets/cover.png';
 import casper from '../assets/casper.png';
+import casper2 from '../assets/casper2.png';
 import linkedin from '../assets/linkedin-logo.png';
 import belgium from '../assets/belgium.png'
-import ap from '../assets/ap.png'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -78,7 +78,7 @@ export default {
   spotify,
   cover,
   casper,
+  casper2,
   linkedin,
   belgium,
-  ap,
 };
