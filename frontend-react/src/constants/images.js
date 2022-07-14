@@ -25,7 +25,6 @@ import about04 from '../assets/about04.png';
 
 import profile from '../assets/profile.png';
 import circle from '../assets/circle.svg';
-import logo from '../assets/logo.png';
 
 import adidas from '../assets/adidas.png';
 import amazon from '../assets/amazon.png';
@@ -35,12 +34,10 @@ import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
 
-import cover from '../assets/cover.png';
-import casper from '../assets/casper.png';
-import casper2 from '../assets/casper2.png';
+import casper from '../assets/casper-profile.webp';
 import linkedin from '../assets/linkedin-logo.png';
 import belgium from '../assets/belgium.png'
-import logo2 from '../assets/logo2.png'
+import logo from '../assets/logo.png'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -77,10 +74,7 @@ export default {
   nb,
   skype,
   spotify,
-  cover,
   casper,
-  casper2,
   linkedin,
   belgium,
-  logo2,
 };
