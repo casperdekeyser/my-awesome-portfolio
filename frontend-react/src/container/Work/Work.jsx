@@ -21,9 +21,11 @@ const Work = () => {
 		client.fetch(query).then((data) => {
 			setWorks(data);
 			setFilterWork(data);
+			// handleWorkFilter("Top")
 		});
 	}, []);
 
+	
 	const handleWorkFilter = (item) => {
 		setActiveFilter(item);
 		setAnimateCard([{ y: 100, opacity: 0 }]);
@@ -37,6 +39,11 @@ const Work = () => {
 			}
 		}, 500);
 	};
+
+	useEffect(() => {
+		handleWorkFilter("Top");
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [works]);
 
 	const showAlert = () => {
 		Swal.fire(
@@ -60,7 +67,6 @@ const Work = () => {
 					"Mobile",
 					"Game",
 					"VR",
-					"Research",
 					"Other",
 				].map((item, index) => (
 					<div
